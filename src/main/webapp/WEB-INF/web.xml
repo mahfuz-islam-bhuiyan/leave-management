@@ -31,5 +31,13 @@
         <url-pattern>*.json</url-pattern>
     </servlet-mapping>
 
+    <!-- Loads Spring Security config file -->
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>
+            /WEB-INF/config/datasource-postgre-cfg.xml
+        </param-value>
+    </context-param>
+
 
 </web-app>

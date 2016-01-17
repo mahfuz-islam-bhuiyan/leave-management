@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.1.xsd">
+
+    <bean id="myDataSource"
+          class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="org.postgresql.Driver" />
+        <property name="url" value="jdbc:postgresql://localhost:5432/springsecurity" />
+        <property name="username" value="postgres" />
+        <property name="password" value="123456" />
+
+        <!-- JDBC connection for Oracle server-->
+        <!--<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
+        <property name="url" value="jdbc:oracle:thin:@localhost:1521:db11g" />-->
+
+
+        <!-- JDBC connection for MySQL server -->
+        <!--<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+        <property name="url" value="jdbc:mysql://localhost:3306/simplehr" />-->
+
+
+        <!-- Using JDBC Driver: JTDS -->
+        <!--<property name="driverClassName" value="net.sourceforge.jtds.jdbc.Driver" />
+        <property name="url"
+                  value="jdbc:jtds:sqlserver://localhost:1433/simplehr;instance=SQLEXPRESS" />-->
+    </bean>
+</beans>
