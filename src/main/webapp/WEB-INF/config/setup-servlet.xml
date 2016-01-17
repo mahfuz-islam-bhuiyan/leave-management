@@ -13,6 +13,11 @@
     <!-- Enables the Spring MVC Annotation Configuration -->
     <context:annotation-config/>
 
+    <!-- Default Servlet Handler (For Resources *.css, *.js, image,..) -->
+    <!--<mvc:default-servlet-handler />-->
+    <mvc:resources mapping="/resources/**" location="/resources/" />
+
+
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 
         <property name="prefix">
