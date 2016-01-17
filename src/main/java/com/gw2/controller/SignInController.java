@@ -1,6 +1,8 @@
 package com.gw2.controller;
 
 import com.gw2.model.User;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -17,9 +19,12 @@ import javax.validation.Valid;
 @Controller
 public class SignInController {
 
+    private static final Logger logger = LoggerFactory.getLogger(SignInController.class);
+
     @RequestMapping(value = "/sign_in", method = RequestMethod.GET)
     public String signIn(Model model) {
         model.addAttribute("user", new User());
+        logger.error("Whowaaa !!!!");
         return "sign_in";
     }
 
