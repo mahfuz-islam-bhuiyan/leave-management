@@ -55,6 +55,12 @@
 
         <!-- PostGreSQL JDBC Driver-->
         <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>4.1.4.RELEASE</version>
+        </dependency>
+
+        <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <version>9.2-1003-jdbc4</version>
