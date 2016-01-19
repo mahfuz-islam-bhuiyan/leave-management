@@ -22,6 +22,11 @@ h3{
     box-sizing: border-box;
 }
 
-.center_div {
+.center_outer_div {
+    width: 100%;
     text-align: center;
+}
+
+.center_inner_div {
+    display: inline-block;
 }

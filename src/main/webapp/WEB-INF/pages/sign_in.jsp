@@ -31,8 +31,8 @@
 
 <div id="main_content">
 
-    <div class="center_div">
-        <div style="margin-bottom: 20px;"><img src="<spring:url value="/resources/img/nophoto_user.png"/> " alt="User Photo" class="circle"></div>
+    <div class="center_outer_div">
+        <div style="margin-bottom: 20px;" class="center_inner_div" ><img src="<spring:url value="/resources/img/nophoto_user.png"/> " alt="User Photo" class="circle"></div>
         <div>
         <form:form commandName="user" cssClass="center_horizontal">
             <form:input path="username" placeholder="Enter Username"/> <br><br>
