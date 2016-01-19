@@ -13,3 +13,15 @@ h3{
     color: white;
     background: #2c3e50;
 }
+
+.circle {
+    border: 2px solid transparent;
+    border-radius: 50%;
+    width: 100px; height: 100px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.center_div {
+    text-align: center;
+}

@@ -27,16 +27,20 @@
 <body>
 
 
-<div id="main_content">
-    <h3>Welcome to Leave Management</h3>
+<h3 style="margin-top: 100px;">Welcome to Leave Management</h3>
 
-    <div >
+<div id="main_content">
+
+    <div class="center_div">
+        <div style="margin-bottom: 20px;"><img src="<spring:url value="/resources/img/nophoto_user.png"/> " alt="User Photo" class="circle"></div>
+        <div>
         <form:form commandName="user" cssClass="center_horizontal">
             <form:input path="username" placeholder="Enter Username"/> <br><br>
             <form:input path="password" placeholder="Enter Password" type="password"/> <br><br>
 
             <input class="button center_horizontal" type="submit" value="Sign In"/>
         </form:form>
+        </div>
     </div>
 </div>
 
