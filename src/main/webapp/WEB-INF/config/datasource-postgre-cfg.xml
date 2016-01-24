@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans-4.1.xsd">
 
-    <bean id="myDataSource"
+    <bean id="pgDataSource"
           class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-        <property name="driverClassName" value="org.postgresql.Driver" />
-        <property name="url" value="jdbc:postgresql://localhost:5432/springsecurity" />
-        <property name="username" value="postgres" />
-        <property name="password" value="123456" />
+        <property name="driverClassName" value="org.postgresql.Driver"/>
+        <property name="url" value="jdbc:postgresql://localhost:5432/springsecurity"/>
+        <property name="username" value="mahfuz"/>
+        <property name="password" value="asd"/>
+        <!--<property name="username" value="postgres"/>-->
+        <!--<property name="password" value="123456"/>-->
 
         <!-- JDBC connection for Oracle server-->
         <!--<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />

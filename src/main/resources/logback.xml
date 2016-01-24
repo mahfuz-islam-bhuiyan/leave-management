@@ -11,7 +11,7 @@
 	</appender>
 
 	<appender name="fileAppender" class="ch.qos.logback.core.FileAppender">
-		<file>/home/mahfuz/logs/fams.log</file>
+		<file>/home/mahfuz/logs/leave_management.log</file>
 		<encoder>
 			<Pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg %n
 			</Pattern>
@@ -24,16 +24,19 @@
 	<logger name="com.gw2" additivity="false">
 	    <level value="DEBUG" />
 		<appender-ref ref="fileAppender" />
+		<appender-ref ref="consoleAppender" />
 	</logger>
 	
 	<logger name="java.sql" additivity="false">
 	    <level value="DEBUG" />
+		<appender-ref ref="fileAppender" />
 		<appender-ref ref="consoleAppender" />
 	</logger>
 
 	<logger name="org.springframework" additivity="false">
 	    <level value="DEBUG" />
 		<appender-ref ref="fileAppender" />
+		<appender-ref ref="consoleAppender" />
 	</logger>
 
 	<root>
