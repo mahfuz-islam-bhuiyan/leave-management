@@ -32,7 +32,7 @@
 
 <div  id="main_content">
 
-    <div class="center_outer_div">
+    <div class="center_outer_div" onload='document.f.j_username.focus();'>
 
         <c:if test="${not empty error}">
             <div class="errorblock">
@@ -45,13 +45,22 @@
                 src="<spring:url value="/resources/img/nophoto_user.png"/> " alt="User Photo" class="circle" />
         </div>
 
+        <%--<div>--%>
+            <%--<form:form commandName="user" cssClass="center_horizontal">--%>
+                <%--<form:input path="username" placeholder="Enter Username"/> <br><br>--%>
+                <%--<form:input path="password" placeholder="Enter Password" type="password"/> <br><br>--%>
+
+                <%--<input class="button center_horizontal" type="submit" value="Sign In"/>--%>
+            <%--</form:form>--%>
+        <%--</div>--%>
+
         <div>
-            <form:form commandName="user" cssClass="center_horizontal">
-                <form:input path="username" placeholder="Enter Username"/> <br><br>
-                <form:input path="password" placeholder="Enter Password" type="password"/> <br><br>
+            <form class="center_horizontal" action="j_spring_security_check" name="f" method="post">
+                <input name="j_username" placeholder="Enter Username"/> <br><br>
+                <input name="j_password" placeholder="Enter Password" type="password"/> <br><br>
 
                 <input class="button center_horizontal" type="submit" value="Sign In"/>
-            </form:form>
+            </form>
         </div>
     </div>
 </div>

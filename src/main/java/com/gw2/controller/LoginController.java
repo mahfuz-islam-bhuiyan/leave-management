@@ -26,7 +26,7 @@ public class LoginController {
     public String login(Model model) {
 
         model.addAttribute("user", new User());
-        logger.error("Whowaaa !!!!");
+        logger.error("login page");
 
         return "login";
     }

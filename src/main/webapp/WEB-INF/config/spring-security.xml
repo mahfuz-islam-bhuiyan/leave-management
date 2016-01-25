@@ -28,22 +28,30 @@
     </http>
 
 
+    <!--<authentication-manager>-->
+    <!--<authentication-provider>-->
+    <!--<user-service>-->
+    <!--<user name="mahfuz" password="asd" authorities="ROLE_USER"/>-->
+    <!--<user name="admin" password="asd" authorities="ROLE_USER, ROLE_ADMIN"/>-->
+    <!--</user-service>-->
+    <!--</authentication-provider>-->
+
+
+    <!--&lt;!&ndash; authentication from database &ndash;&gt;-->
+    <!--&lt;!&ndash;<authentication-provider>&ndash;&gt;-->
+    <!--&lt;!&ndash;<jdbc-user-service data-source-ref="pgDataSource"&ndash;&gt;-->
+    <!--&lt;!&ndash;users-by-username-query="select username,password, enabled from users where username=?"&ndash;&gt;-->
+    <!--&lt;!&ndash;authorities-by-username-query="select username, role from users where username=?"/>&ndash;&gt;-->
+    <!--&lt;!&ndash;</authentication-provider>&ndash;&gt;-->
+
+    <!--</authentication-manager>-->
+
     <authentication-manager>
         <authentication-provider>
-            <user-service>
-                <user name="mahfuz" password="asd" authorities="ROLE_USER"/>
-                <user name="admin" password="asd" authorities="ROLE_USER, ROLE_ADMIN"/>
-            </user-service>
+            <password-encoder hash="bcrypt" />
+            <!--<password-encoder hash="bcrypt" />-->
+            <jdbc-user-service data-source-ref="pgDataSource" />
         </authentication-provider>
-
-
-        <!-- authentication from database -->
-        <!--<authentication-provider>-->
-        <!--<jdbc-user-service data-source-ref="pgDataSource"-->
-        <!--users-by-username-query="select username,password, enabled from users where username=?"-->
-        <!--authorities-by-username-query="select username, role from users where username=?"/>-->
-        <!--</authentication-provider>-->
-
     </authentication-manager>
 
 </beans:beans>

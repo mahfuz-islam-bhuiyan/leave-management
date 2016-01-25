@@ -7,11 +7,12 @@
     <bean id="pgDataSource"
           class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="org.postgresql.Driver"/>
-        <property name="url" value="jdbc:postgresql://localhost:5432/springsecurity"/>
-        <property name="username" value="mahfuz"/>
-        <property name="password" value="asd"/>
-        <!--<property name="username" value="postgres"/>-->
-        <!--<property name="password" value="123456"/>-->
+        <property name="url" value="jdbc:postgresql://localhost:5432/leave-management"/>
+        <property name="username" value="postgres"/>
+        <property name="password" value="123@456"/>
+        <!--<property name="username" value="mahfuz"/>-->
+        <!--<property name="password" value="asd"/>-->
+
 
         <!-- JDBC connection for Oracle server-->
         <!--<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
