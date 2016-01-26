@@ -26,7 +26,7 @@ public class LoginController {
     public String login(Model model) {
 
         model.addAttribute("user", new User());
-        logger.error("login page");
+        logger.info("login page");
 
         return "login";
     }
@@ -51,7 +51,7 @@ public class LoginController {
 
         model.addAttribute("user", new User());
         model.addAttribute("error", "true");
-        logger.info("Login Failed");
+        logger.error("Login Failed");
 
         return "login";
     }
