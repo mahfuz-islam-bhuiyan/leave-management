@@ -6,7 +6,6 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
@@ -32,7 +31,7 @@
 
 <div  id="main_content">
 
-    <div class="center_outer_div" onload='document.f.j_username.focus();'>
+    <div class="center_outer_div" onload='document.f.username.focus();'>
 
         <c:if test="${not empty error}">
             <div class="errorblock">
@@ -44,15 +43,6 @@
         <div style="margin-bottom: 20px;" class="center_inner_div"><img
                 src="<spring:url value="/resources/img/nophoto_user.png"/> " alt="User Photo" class="circle" />
         </div>
-
-        <%--<div>--%>
-            <%--<form:form commandName="user" cssClass="center_horizontal">--%>
-                <%--<form:input path="username" placeholder="Enter Username"/> <br><br>--%>
-                <%--<form:input path="password" placeholder="Enter Password" type="password"/> <br><br>--%>
-
-                <%--<input class="button center_horizontal" type="submit" value="Sign In"/>--%>
-            <%--</form:form>--%>
-        <%--</div>--%>
 
         <div>
             <form class="center_horizontal" action="j_spring_security_check" name="f" method="post">

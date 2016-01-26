@@ -10,6 +10,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.validation.Valid;
 
@@ -23,30 +24,20 @@ public class LoginController {
     private static final Logger logger = LoggerFactory.getLogger(LoginController.class);
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
-    public String login(Model model) {
+    public String login(Model model,
+                        @RequestParam(value = "error", required = false) String error) {
 
         model.addAttribute("user", new User());
         logger.info("login page");
 
+        if(error != null) {
+            model.addAttribute("error", "true");
+        }
+
         return "login";
     }
 
-    @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public String login(@Valid @ModelAttribute("user") User user, BindingResult result) {
-
-        System.out.println("username " + user.getUsername());
-//        System.out.println("result has errors: " + result.hasErrors());
-
-//        System.out.println("Minutes updated: " + goal.getMinutes());
-
-//        if (result.hasErrors()) {
-//            return "addGoal";
-//        }
-
-        return "redirect:login";
-    }
-
-    @RequestMapping(value = "/loginFailed", method = RequestMethod.GET)
+    /*@RequestMapping(value = "/loginFailed", method = RequestMethod.GET)
     public String loginFailed(Model model) {
 
         model.addAttribute("user", new User());
@@ -54,9 +45,14 @@ public class LoginController {
         logger.error("Login Failed");
 
         return "login";
+    }*/
+
+    @RequestMapping(value = "/userInfo")
+    public String showUserInfo(){
+        return "userInfoPage";
     }
 
-    @RequestMapping(value="/logout", method=RequestMethod.GET)
+    @RequestMapping(value="/logoutSuccess", method=RequestMethod.GET)
     public String logout(ModelMap model) {
         return "logout";
     }

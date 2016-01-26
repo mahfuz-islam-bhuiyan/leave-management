@@ -1,11 +1,16 @@
 package com.gw2.model;
 
+import javax.validation.constraints.NotNull;
+
 /**
  * Created by mahfuz on 1/13/16.
  */
 public class User {
 
+    @NotNull
     private String username;
+
+    @NotNull
     private String password;
 
     public User() {
