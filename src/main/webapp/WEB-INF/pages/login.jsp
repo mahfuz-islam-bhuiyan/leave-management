@@ -31,7 +31,7 @@
 
 <div  id="main_content">
 
-    <div class="center_outer_div" onload='document.f.username.focus();'>
+    <div class="center_outer_div" onload='document.f.j_username.focus();'>
 
         <c:if test="${not empty error}">
             <div class="errorblock">
