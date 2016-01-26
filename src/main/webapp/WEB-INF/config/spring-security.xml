@@ -22,11 +22,14 @@
         <form-login
                 login-page="/login"
                 authentication-failure-url="/loginFailed"
+                authentication-success-handler-ref="leaveManagementAuthenticationSuccessHandler"
         />
         <logout logout-success-url="/logout" />
         <access-denied-handler error-page="/403" />
     </http>
 
+    <beans:bean id="leaveManagementAuthenticationSuccessHandler"
+                class="com.gw2.handler.HomeAuthenticationSuccessHandler" />
 
     <!--<authentication-manager>-->
     <!--<authentication-provider>-->
